@@ -1,0 +1,32 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int digit=0;
+        int rem;
+        int temp=x;
+        if(x>=0)
+        {
+        while(temp!=0)
+        {
+            rem=temp%10;
+            digit=digit*10+rem;
+            temp=temp/10;
+        }
+        if(digit==x){
+             return true;
+        }
+        }
+        else if(x<=0)
+        {
+        while(temp!=0)
+        {
+            rem=temp%10;
+            digit=digit*10-rem;
+            temp=temp/10;
+        }
+        if(digit==x){
+             return true;
+        }
+        }
+ return false;   
+}
+}
