@@ -1,39 +1,21 @@
-package javaapplication1;
-import java.util.Scanner;
-public class JavaApplication1 {
-    public static void main(String[] args) 
+class Solution
+{
+    public int[] twoSum(int[] nums, int target) 
     {
-    
-       /*Input: nums = [2,7,11,15], target = 9
-         Output: [0,1]
-         Explanation: Because nums[0] + nums[1] == 9, we return [0, 1] */
-       
-       int n,i,j,k,tot;
-	    Scanner sc=new Scanner(System.in);
-      System.out.println("Enter number of elements:");
-	    n=sc.nextInt();
-	    System.out.println("Enter total:");
-	    tot=sc.nextInt();
-		int arr[]=new int[n];
-		for(i=0;i<n;i++)
+        int[] arr=new int[2]; 
+        int j,k,n;
+		for(j=0;j<nums.length;j++)
 		{
-		    arr[i]=sc.nextInt();
-		}
-		for(i=0;i<n;i++)
-		{
-		    System.out.println("\nElements are:"+arr[i]);
-		}
-		for(j=0;j<n;j++)
-		{
-		    for(k=j+1;k<n;k++)
+		    for(k=j+1;k<nums.length;k++)
 		    {
-		        if(arr[j]+arr[k]==tot)
+		        if(nums[j]+nums[k]==target)
 		        {
-		            System.out.println("\n["+j+","+k+"]");
+		           arr[0]=j;
+                   arr[1]=k;
                             
 		        }
 		    }
-		}
-    }
-    
+        }
+        return arr;
+    } 
 }
