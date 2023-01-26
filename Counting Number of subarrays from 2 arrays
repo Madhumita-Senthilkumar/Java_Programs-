@@ -1,0 +1,20 @@
+package javaapplication8;
+public class JavaApplication8 {
+/* Counting number of subarrays from given 2 arrays */
+    public static void main(String[] args) {
+        int i,j,count=0;
+        int arr[]={1,5,9,13,21};
+        int arr1[]={15,21,8,12,20};
+        int len=arr.length;
+        int len1=arr1.length;
+        for(i=0;i<len;i++)
+        {
+            for(j=i;j<len1;j++)
+            {
+                count++;
+                break;
+            }
+        }
+        System.out.println(count);
+        }
+    }
