@@ -1,0 +1,33 @@
+package javaapplication19;
+import java.util.Scanner;
+public class JavaApplication19 {
+    public static void main(String[] args) {
+        int rows,cols;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Number of rows");
+        rows=sc.nextInt();
+        cols=(2*rows)-1; 
+//If the pyramid has 3 rows then number of columns will be 2*3-1=5
+/* 
+       *
+     * * *
+   * * * * * 
+is the example pattern
+*/
+for(int i=1;i<=rows;i++)
+{
+    for(int j=1;j<=cols;j++)
+    {
+        if(j>=rows-(i-1) && j<=rows+(i-1))
+        {
+           System.out.print("*"); 
+        }
+        else
+        {
+            System.out.print(" ");
+        }
+    }
+      System.out.println(); 
+}
+}  
+}
